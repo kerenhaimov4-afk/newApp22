@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NewApp2">
         <activity
+            android:name=".su"
+            android:exported="false" />
+        <activity
+            android:name=".cl"
+            android:exported="false" />
+        <activity
             android:name=".result"
             android:exported="false" />
         <activity
