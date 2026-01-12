@@ -8,15 +8,15 @@ import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class login extends AppCompatActivity {
-    Button ButtonF;
+    Button ButtonF1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.login);
-        ButtonF=findViewById(R.id.ButtonF);
-        ButtonF.setOnClickListener((v) -> {
+        ButtonF1=findViewById(R.id.ButtonF1);
+        ButtonF1.setOnClickListener((v) -> {
             Intent intent = new Intent(login.this, result.class);
             super.startActivity(intent);
         });

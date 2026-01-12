@@ -20,16 +20,7 @@ public class Fragment1 extends Fragment {
                              Bundle savedInstanceState) {
         return inflater.inflate(R.layout.fragment_1, container, false);
 
-        //ButtonC1=findViewById(R.id.ButtonC1);
 
-      //  ButtonC1.setOnClickListener(new View.OnClickListener() {
-          //  @Override
-         //   public void onClick(View v) {
-          //      Intent intent=new Intent(Fragment1.this, login.class);
-       //         startActivity(intent);
-
-      //      }
-      //  });
 
     }
 

@@ -29,5 +29,9 @@ public class User {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public boolean isSameUser(User user) {
+        return  this.username == user.username && this.password == user.password;
+    }
 }
 

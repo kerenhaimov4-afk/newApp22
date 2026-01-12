@@ -42,11 +42,17 @@ public class MainActivity1 extends AppCompatActivity {
             }
         });
 
+        ButtonS.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MainActivity1.this, su.class);
+                startActivity(intent);
+
+            }
+        });
+
 
 
     }
 
-    public void InUsers(){
-
-    }
 }
