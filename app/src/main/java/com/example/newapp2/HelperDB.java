@@ -6,28 +6,32 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-public class HelperDB extends SQLiteOpenHelper {
-    private static final String DATABASE_NAME = "users.db";
-    private static final int DATABASE_VERSION = 1;
+    public class HelperDB extends SQLiteOpenHelper {
 
-    public static final String CUSTOMER_TABLE = "USER_TABLE";
-    public static final String COLUMN_ID = "ID";
-    public static final String COLUMN_USER_NAME = "USER_NAME";
-    public static final String COLUMN_USER_PASS = "USER_PASS";
+        public static final String DB_FILE = "info.db";
+        public static final String USER_TABLE = "user_table";
+        public static final String COLUMN_ID = "id";
+        public static final String COLUMN_USER_NAME = "user_name";
+        public static final String COLUMN_USER_PASS = "user_pass";
 
+        public HelperDB( Context context) {
+            super(context, DB_FILE, null, 3);
+        }
 
-    public HelperDB(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, COLUMN_USER_NAME, factory, version);
-    }
-    @Override
+        @Override
         public void onCreate(SQLiteDatabase db) {
-        String createTableStatement= "CREATE TABLE  USER_TABLE(" + COLUMN_ID + "  INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_USER_NAME + " TEXT , " + COLUMN_USER_PASS + " TEXT)";
-        db.execSQL(createTableStatement);
-    }
+            String st = "CREATE TABLE " + USER_TABLE + " (" +
+                    COLUMN_ID + " TEXT PRIMARY KEY, " +
+                    COLUMN_USER_NAME + " TEXT, " +
+                    COLUMN_USER_PASS + " TEXT)";
+            db.execSQL(st);
+        }
         @Override
         public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-
+            db.execSQL(" DROP TABLE IF EXISTS " + USER_TABLE);
+            onCreate(db);
 
         }
     }
+
 

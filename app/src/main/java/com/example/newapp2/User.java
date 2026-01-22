@@ -6,6 +6,8 @@ public class User {
     private int id;
     private String password;
 
+    //User user=new User();
+
     public int getId() {
         return id;
     }
@@ -32,6 +34,8 @@ public class User {
 
     public boolean isSameUser(User user) {
         return  this.username == user.username && this.password == user.password;
+
+
     }
 }
 
