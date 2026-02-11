@@ -12,10 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NewApp2">
         <activity
-            android:name=".su"
+            android:name=".RangeCalc"
             android:exported="false" />
         <activity
-            android:name=".cl"
+            android:name=".su"
             android:exported="false" />
         <activity
             android:name=".result"

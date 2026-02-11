@@ -9,21 +9,34 @@
     android:background="@drawable/imgg"
     tools:context=".login">
 
-    <!-- Title -->
+    <!-- Image with dark overlay -->
+    <ImageView
+        android:id="@+id/imageViewBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imgg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
-    <!-- Username -->
+    <!-- Dark overlay to darken the image -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000" /> <!-- Semi-transparent black overlay -->
 
-    <!-- Password -->
-
-    <!-- Login Button -->
-
+    <!-- Title TextView -->
     <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Log in screen"
         android:textColor="#D97C3C"
-        android:textSize="48sp"
+        android:textSize="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
@@ -31,6 +44,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.106" />
 
+    <!-- Username EditText -->
     <EditText
         android:id="@+id/editTextUsername"
         android:layout_width="0dp"
@@ -47,6 +61,7 @@
         app:layout_constraintTop_toBottomOf="@id/textViewTitle"
         app:layout_constraintVertical_bias="0.208" />
 
+    <!-- Password EditText -->
     <EditText
         android:id="@+id/editTextPassword"
         android:layout_width="0dp"
@@ -63,48 +78,54 @@
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.609" />
+        app:layout_constraintVertical_bias="0.629" />
 
+    <!-- Login Button -->
     <Button
         android:id="@+id/ButtonF1"
-        android:layout_width="220dp"
-        android:layout_height="56dp"
+        android:layout_width="272dp"
+        android:layout_height="59dp"
         android:layout_marginTop="376dp"
         android:backgroundTint="#D97C3C"
         android:text="Login"
-        android:textSize="18sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.464"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.816" />
+        app:layout_constraintVertical_bias="0.85" />
 
+    <!-- Username prompt TextView -->
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
         android:layout_marginTop="36dp"
         android:text="Enter your username"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewTitle"
-        app:layout_constraintVertical_bias="0.112" />
+        app:layout_constraintVertical_bias="0.1" />
 
+    <!-- Password prompt TextView -->
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
         android:layout_marginTop="36dp"
         android:text="Enter your password"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.536"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewTitle"
-        app:layout_constraintVertical_bias="0.393" />
+        app:layout_constraintVertical_bias="0.403" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,7 +11,9 @@ import android.widget.EditText;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.activity.EdgeToEdge;
 
-  public class su extends AppCompatActivity {
+import java.util.ArrayList;
+
+public class su extends AppCompatActivity {
 
     Button buttonF2;
     EditText etUsername, etPass, etPassC, etId;
@@ -19,8 +21,10 @@ import androidx.activity.EdgeToEdge;
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
 
         EdgeToEdge.enable(this);
@@ -34,6 +38,7 @@ import androidx.activity.EdgeToEdge;
         etId = findViewById(R.id.etId);
         buttonF2 = findViewById(R.id.ButtonF2);
 
+
         helperDB = new HelperDB(this);
 
         buttonF2.setOnClickListener(new View.OnClickListener() {
@@ -44,8 +49,12 @@ import androidx.activity.EdgeToEdge;
                 String id = etId.getText().toString();
                 insertData(username,pass,id);
 
+
+
                 Intent intent = new Intent(su.this, result.class);
                 startActivity(intent);
+
+
             }
         });
     }
@@ -60,6 +69,8 @@ import androidx.activity.EdgeToEdge;
         db.close();
 
     }
+
+
 }
 
 

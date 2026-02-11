@@ -1,61 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/imgg"
-    android:orientation="vertical"
     tools:context=".MainActivity1">
 
+    <!-- Dark overlay for better contrast -->
+
+    <!-- Title -->
+
+    <!-- Subtitle -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/Title"
         android:layout_width="match_parent"
-        android:layout_height="341dp"
+        android:layout_height="77dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="126dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="527dp"
         android:gravity="center"
-        android:text="Horizontal Throw Simulator "
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="65dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.138" />
+        android:text="ThrowCalc"
+        android:textColor="#CCFFFFFF"
+        android:textSize="50sp"
+        android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/subTitle"
         android:layout_width="match_parent"
-        android:layout_height="267dp"
-        android:text="calculation of impact distance, time and initial velocity and show simulation  "
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="40dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.138" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="209dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="488dp"
+        android:gravity="center"
+        android:text="Horizontal Throw Simulation"
+        android:textColor="#CCFFFFFF"
+        android:textSize="25sp" />
+
+    <!-- Decorative line -->
+    <View
+        android:layout_width="290dp"
+        android:layout_height="2dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="249dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="479dp"
+        android:background="#55FFFFFF" />
+
+    <!-- Login button -->
+
+    <!-- Sign up button -->
 
     <Button
         android:id="@+id/ButtonL"
-        android:layout_width="match_parent"
-        android:layout_height="77dp"
+        android:layout_width="314dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="555dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="124dp"
         android:backgroundTint="#D97C3C"
         android:text="log in"
-        android:textSize="24dp" />
+        android:textSize="26sp" />
 
     <Button
         android:id="@+id/ButtonS"
-        android:layout_width="match_parent"
-        android:layout_height="71dp"
+        android:layout_width="321dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="619dp"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="54dp"
         android:backgroundTint="#D97C3C"
         android:text="sign up"
-        android:textSize="24dp" />
+        android:textSize="26sp" />
 
-
-</LinearLayout>
+</RelativeLayout>

@@ -9,16 +9,25 @@
     android:background="@drawable/imgg"
     tools:context=".login">
 
+    <!-- Image with dark overlay -->
+    <ImageView
+        android:id="@+id/imageViewBackground"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/imgg"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Dark overlay to darken the image -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#66000000" /> <!-- Semi-transparent black overlay -->
+
     <!-- Title -->
-
-    <!-- Username label -->
-
-    <!-- Username input -->
-
-    <!-- Password label -->
-
-    <!-- Password input -->
-
     <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
@@ -32,6 +41,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.076" />
 
+    <!-- Username label -->
     <TextView
         android:id="@+id/tvUsername"
         android:layout_width="wrap_content"
@@ -39,14 +49,14 @@
         android:layout_marginTop="36dp"
         android:text="Enter your username"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewTitle"
         app:layout_constraintVertical_bias="0.0" />
 
-
+    <!-- User ID label -->
     <TextView
         android:id="@+id/textViewId"
         android:layout_width="wrap_content"
@@ -54,7 +64,7 @@
         android:layout_marginTop="36dp"
         android:text="Enter your id"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -62,6 +72,7 @@
         app:layout_constraintTop_toBottomOf="@id/textViewTitle"
         app:layout_constraintVertical_bias="0.214" />
 
+    <!-- Password label -->
     <TextView
         android:id="@+id/textViewPassword1"
         android:layout_width="wrap_content"
@@ -69,13 +80,14 @@
         android:layout_marginTop="36dp"
         android:text="Enter your password"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/textViewTitle"
         app:layout_constraintVertical_bias="0.422" />
 
+    <!-- Username input -->
     <EditText
         android:id="@+id/etUsername"
         android:layout_width="0dp"
@@ -94,12 +106,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.268" />
 
-    <!-- Confirm password label -->
-
-    <!-- Confirm password input -->
-
-    <!-- Button -->
-
+    <!-- User ID input -->
     <EditText
         android:id="@+id/etId"
         android:layout_width="0dp"
@@ -115,8 +122,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.44" />
+        app:layout_constraintVertical_bias="0.45" />
 
+    <!-- Password input -->
     <EditText
         android:id="@+id/etPass"
         android:layout_width="0dp"
@@ -129,25 +137,26 @@
         android:textColorHint="#AAAAAA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.618" />
+        app:layout_constraintVertical_bias="0.632" />
 
+    <!-- Confirm password label -->
     <TextView
         android:id="@+id/textViewPassword2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="92dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="30dp"
         android:text="Confirm your password"
         android:textColor="@color/white"
-        android:textSize="24sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.708" />
 
+    <!-- Confirm password input -->
     <EditText
         android:id="@+id/etPassC"
         android:layout_width="0dp"
@@ -160,24 +169,24 @@
         android:textColorHint="#AAAAAA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.806" />
+        app:layout_constraintVertical_bias="0.817" />
 
+    <!-- Sign Up Button -->
     <Button
         android:id="@+id/ButtonF2"
-        android:layout_width="220dp"
-        android:layout_height="56dp"
+        android:layout_width="250dp"
+        android:layout_height="57dp"
         android:layout_marginTop="32dp"
         android:backgroundTint="#D97C3C"
         android:text="Click to continue"
-        android:textSize="18sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.953" />
+        app:layout_constraintVertical_bias="0.92" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
